@@ -1,0 +1,86 @@
+<p>swtchcase works!</p>
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">
+        <h3>color is red</h3>
+
+    </div>
+    <div *ngSwitchCase="'green'">
+        <h3>color is green</h3>
+
+    </div>
+    <div *ngSwitchCase="'blue'">
+        <h3>color is blue</h3>
+
+    </div>
+    <div *ngSwitchDefault>
+        <h3>no color</h3>
+
+    </div>
+
+</div>
+<!-- ngfor -->
+<ul *ngFor="let x of studentlist">
+    <li>{{x}}</li>
+</ul>
+<!-- for with index -->
+<ul *ngFor="let x of studentlist;index as i">
+    <li>{{i}}{{x}}</li>
+</ul>
+<!--  -->
+<table border="2">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Place</th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student['name']}}</td>
+        <td>{{student['Age']}}</td>
+        <td>{{student['place']}}</td>
+        <td><button>DELETE</button></td>
+
+    </tr>
+</table>
+<hr>
+<!-- assignment -->
+<select [(ngModel)]="displaycolor">
+    <option value="Red">Red</option>
+    <option value="green">green</option>
+    <option value="blue">blue</option>
+    <option value="violet">violet</option>
+    <option value="grey">grey</option>
+</select>
+<div [ngSwitch]="displaycolor">
+    <div *ngSwitchCase="'Red'" [style.background-color]="displaycolor">
+        <h4>this is red</h4>
+    </div>
+    <div *ngSwitchCase="'green'" [style.background-color]="displaycolor">
+        <h4>this is green</h4>
+    </div>
+    <div *ngSwitchCase="'blue'" [style.background-color]="displaycolor">
+        <h4>this is blue</h4>
+    </div>
+    <div *ngSwitchCase="'violet'" [style.background-color]="displaycolor">
+        <h4>this is violet</h4>
+    </div>
+    <div *ngSwitchCase="'grey'" [style.background-color]="displaycolor">
+        <h4>this is grey</h4>
+    </div>
+
+</div>
+<hr>
+<!-- deletecase -->
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Place</th>
+    </tr>
+    <tr *ngFor="let x of newarray;index as i">
+        <td>{{x['name']}}</td>
+        <td>{{x['age']}}</td>
+        <td>{{x['place']}}</td>
+        <td><button (click)="deletefn(i)">Delete</button></td>
+    </tr>
+
+</table>

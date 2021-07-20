@@ -1,0 +1,22 @@
+<!-- <p>login works!</p> -->
+<input type="text">
+<button>click</button>
+<p>{{myname}}</p>
+<input type="text" id="id1">
+<br>
+<input type="text" [id]="myid"><br>
+<input type="text" [disabled]="vartest1">
+<br>
+<!-- //property binding -->
+<button (click)="testfun()">click</button>
+<!-- two way binding -->
+<br><input type="text" name="twoway" [(ngModel)]="favcolor">
+<!-- {{favcolor}} -->
+<!-- <hr>
+<input type="text" name="tx1" [(ngModel)]="newcolor"> -->
+<button (click)="samplefun()">click</button>
+<br><br>
+<input type="text" name="tx2" [(ngModel)]="ngmodel1">
+<div [style.background-color]="ngmodel1">
+
+</div>

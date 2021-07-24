@@ -29,6 +29,7 @@ import { ShowdetailsComponent } from './showdetails/showdetails.component';
     SwtchcaseComponent,
     RegformComponent,
     ShowdetailsComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,8 @@ import { ShowdetailsComponent } from './showdetails/showdetails.component';
     MatDatepickerModule,MatNativeDateModule,
     MatRadioModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    
     
   ],
   providers: [],
